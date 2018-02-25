@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    * Copyright (C) 2018 by George Vrynios
+    * GV 21/02/2018
+    *
+    * Project: how to prevent your Sensitive Data (like API keys) from publishing on GitHub repos
+    *
+    * Licensed under the Apache License, Version 2.0 (the "License");
+    * you may not use this file except in compliance with the License.
+    * You may obtain a copy of the License at
+    *
+    * http://www.apache.org/licenses/LICENSE-2.0
+    *
+    * Unless required by applicable law or agreed to in writing, software
+    * distributed under the License is distributed on an "AS IS" BASIS,
+    * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    * See the License for the specific language governing permissions and
+    * limitations under the License.
+-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:context="com.aiassoft.sensitivedataguide.MainActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@android:color/background_light"
+            android:text="@string/constant_fields"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/the_movie_db_org_api_key"
+            android:paddingTop="8dp"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_c_the_movie_db_org_api_key"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:paddingBottom="8dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/facebook_app_id"
+            android:paddingTop="8dp"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_c_facebook_app_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:paddingBottom="8dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GMail Username"
+            android:paddingTop="8dp"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_c_gmail_credential_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:paddingBottom="8dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/gmail_credential_password"
+            android:paddingTop="8dp"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_c_gmail_credential_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:paddingBottom="8dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/background_light"
+            android:textSize="20sp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="@string/string_resources"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/the_movie_db_org_api_key"
+            android:paddingTop="8dp"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_s_the_movie_db_org_api_key"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:paddingBottom="8dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:text="@string/facebook_app_id"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_s_facebook_app_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:paddingBottom="8dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/gmail_credential_username"
+            android:paddingTop="8dp"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_s_gmail_credential_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:paddingBottom="8dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/gmail_credential_password"
+            android:paddingTop="8dp"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_s_gmail_credential_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:paddingBottom="8dp"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</ScrollView>

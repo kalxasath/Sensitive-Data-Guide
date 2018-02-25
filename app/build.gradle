@@ -1,0 +1,70 @@
+apply plugin: 'com.android.application'
+
+// Begin of reading the sensitive data
+// GV 21/02/2018
+def noKeyFound = '"NO_KEY_FOUND"'
+def theMovieDbApiKey = noKeyFound
+def facebookAppId = noKeyFound
+def gmailCredentialUsername = noKeyFound
+def gmailCredentialPassword = noKeyFound
+
+def sensitiveDataFile = file('../sensitive_data.txt')
+def Properties sensitiveData = new Properties()
+
+if (sensitiveDataFile.canRead()){
+    // Read the sensitive data from file sensitive_data.txt
+    sensitiveData.load(new FileInputStream(sensitiveDataFile))
+
+    if (sensitiveData != null) {
+        if (sensitiveData.containsKey('theMovieDbApiKey')) theMovieDbApiKey = sensitiveData['theMovieDbApiKey']
+        if (sensitiveData.containsKey('facebookAppId')) facebookAppId = sensitiveData['facebookAppId']
+        if (sensitiveData.containsKey('gmailCredentialUsername')) gmailCredentialUsername = sensitiveData['gmailCredentialUsername']
+        if (sensitiveData.containsKey('gmailCredentialPassword')) gmailCredentialPassword = sensitiveData['gmailCredentialPassword']
+    }
+}
+
+// In this section a reviewer can insert directly his own sensitive data
+// by replacing the strings beginning with REVIEWERS_
+// Just double click on the string and paste you own data
+if (theMovieDbApiKey == noKeyFound) theMovieDbApiKey = '"REVIEWERS_THEMOVIEDB_API_KEY_GOES_HERE"'
+if (facebookAppId == noKeyFound) facebookAppId = '"REVIEWERS_FACEBOOK_APP_ID_GOES_HERE"'
+if (gmailCredentialUsername == noKeyFound) gmailCredentialUsername = '"REVIEWERS_GMAIL_CREDENTIAL_USERNAME_GOES_HERE"'
+if (gmailCredentialPassword == noKeyFound) gmailCredentialPassword = '"REVIEWERS_GMAIL_CREDENTIAL_PASSWORD_GOES_HERE"'
+// End of reading the sensitive data
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.aiassoft.sensitivedataguide"
+        minSdkVersion 18
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        // Begin of injecting the sensitive data
+        // Add the sensitive data as Constant Fields to the BuildConfig class
+        buildConfigField "String", "THEMOVIEDB_API_KEY", theMovieDbApiKey
+        buildConfigField "String", "FACEBOOK_APP_ID", facebookAppId
+        buildConfigField "String", "GMAIL_CREDENTIAL_USERNAME", gmailCredentialUsername
+        buildConfigField "String", "GMAIL_CREDENTIAL_PASSWORD", gmailCredentialPassword
+        // Add the sensitive data as String Resources
+        resValue "string", "THEMOVIEDB_API_KEY", theMovieDbApiKey
+        resValue "string", "FACEBOOK_APP_ID", facebookAppId
+        resValue "string", "GMAIL_CREDENTIAL_USERNAME", gmailCredentialUsername
+        resValue "string", "GMAIL_CREDENTIAL_PASSWORD", gmailCredentialPassword
+        // End of injecting the sensitive data
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    testImplementation 'junit:junit:4.12'
+}
