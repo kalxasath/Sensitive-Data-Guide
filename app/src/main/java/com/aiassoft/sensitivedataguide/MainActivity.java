@@ -36,15 +36,15 @@ public class MainActivity extends AppCompatActivity {
      * \project root folder\.gitignore
      * \project root folder\app\build.gradle
      */
-    private static TextView theMovieDdOrgApiKeyC;
-    private static TextView facebookAppIdC;
-    private static TextView gmailCredentialUsernameC;
-    private static TextView gmailCredentialPasswordC;
+    private TextView theMovieDdOrgApiKeyC;
+    private TextView facebookAppIdC;
+    private TextView gmailCredentialUsernameC;
+    private TextView gmailCredentialPasswordC;
 
-    private static TextView theMovieDdOrgApiKeyS;
-    private static TextView facebookAppIdS;
-    private static TextView gmailCredentialUsernameS;
-    private static TextView gmailCredentialPasswordS;
+    private TextView theMovieDdOrgApiKeyS;
+    private TextView facebookAppIdS;
+    private TextView gmailCredentialUsernameS;
+    private TextView gmailCredentialPasswordS;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
