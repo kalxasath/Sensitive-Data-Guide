@@ -37,7 +37,7 @@ Don't forget about to update the **.gitignore** file, otherwise your **sensitive
 #my sensitive data
 sensitive_data.txt
 ```
-[a comple .gitignore file from this project can be downloaded from here](https://raw.githubusercontent.com/kalxasath/Sensitive%20Data%20Guide/master/.gitignore)
+[a comple .gitignore file from this project can be downloaded from here](https://raw.githubusercontent.com/kalxasath/Sensitive-Data-Guide/master/.gitignore)
 
 ## Step 3 - Reading the key-value pairs from your sensitive_data.txt file
 
@@ -158,7 +158,8 @@ android:text="@string/THEMOVIEDB_API_KEY"
 ```
 
 ---
-Download the project's file: [sensitive_data.txt](https://raw.githubusercontent.com/kalxasath/Sensitive%20Data%20Guide/master/assets/sensitive_data.txt) 
+After cloning the repository, open the project in your Android Studio and execute the menu "Tools -> Android -> Sync Project With Gradle Files"
+
 
 ---
 ![Lastupdate](https://img.shields.io/badge/last%20update-on%2025%20February%202018-orange.svg)
